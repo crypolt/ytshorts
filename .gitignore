@@ -1,0 +1,39 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+
+# Virtual envs
+.venv/
+venv/
+
+# Env files
+.env
+
+# App caches and outputs
+.cache/
+output/
+output_video/
+
+# Media and large binaries
+*.mp4
+*.m4a
+*.mp3
+*.wav
+*.png
+*.jpg
+*.jpeg
+*.webp
+
+# Local scripts not meant for repo
+vk_download_enhance.py
+python
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/

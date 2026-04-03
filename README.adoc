@@ -1,0 +1,180 @@
+= Crypolt Anime Shorts Studio
+
+Локальное desktop-приложение для генерации vertical anime Shorts в стиле `crypolt`.
+
+== Что умеет приложение
+
+* генерирует Shorts по названию аниме
+* поддерживает два режима рендера: `story` и `amv_edit`
+* делает билингвальные субтитры `RU + EN`
+* добавляет watermark `crypolt`
+* использует neural voice через `edge-tts`
+* подмешивает бесплатную музыку из curated-каталога
+* собирает `final.mp4`, title, description, hashtags и publish metadata
+* показывает готовые проекты и умеет проигрывать видео прямо в GUI
+* анализирует публичные Shorts любого YouTube-канала по ссылке или названию
+
+== Структура проекта
+
+[source,text]
+----
+main.py
+main_gui.py
+.env
+.env.example
+crypolt_shorts/
+  app/
+    cli.py
+    gui.py
+    localization.py
+    settings.py
+  domain/
+    models.py
+  infrastructure/
+    runtime_service.py
+  services/
+    anime_service.py
+    assets_service.py
+    render_service.py
+  resources/
+    music_catalog.json
+    locales/
+      ru.json
+      en.json
+  config.py
+  pipeline.py
+  utils.py
+Makefile
+make.bat
+requirements.txt
+output/
+----
+
+== Конфигурация через `.env`
+
+[source,dotenv]
+----
+CRYPOLT_WATERMARK=crypolt
+CRYPOLT_OUTPUT_DIR=output
+CRYPOLT_DURATION=18
+CRYPOLT_MUSIC_MODE=auto
+CRYPOLT_LANGUAGE_MODE=bilingual
+CRYPOLT_VOICE_MODE=auto
+CRYPOLT_LOCALE=ru
+CRYPOLT_JIKAN_BASE_URL=https://api.jikan.moe/v4
+CRYPOLT_INCOMPETECH_MUSIC_BASE_URL=https://incompetech.com/music/royalty-free/mp3-royaltyfree/
+CRYPOLT_INCOMPETECH_SOURCE_PAGE_URL=https://incompetech.com/music/royalty-free/music.html
+----
+
+== Локализация
+
+Все пользовательские тексты вынесены в:
+
+* `crypolt_shorts/resources/locales/ru.json`
+* `crypolt_shorts/resources/locales/en.json`
+
+== Установка
+
+[source,bash]
+----
+pip install -r requirements.txt
+----
+
+Нужен установленный `ffmpeg`.
+
+== Запуск CLI
+
+[source,bash]
+----
+python main.py --anime "Naruto"
+----
+
+== Запуск GUI
+
+[source,bash]
+----
+python main_gui.py
+----
+
+или
+
+[source,bash]
+----
+make gui
+----
+
+На Windows:
+
+[source,powershell]
+----
+.\make.bat gui
+----
+
+== Как устроен GUI
+
+Приложение разделено на две основные вкладки:
+
+* `Anime Preview` — стартовая вкладка с поиском аниме по названию, карточкой, обложкой, жанрами, рейтингом и синопсисом
+* `New Video` — создание нового ролика, настройки, progress bar, шаг пайплайна, ETA и live log
+* `Projects` — библиотека уже созданных проектов, metadata, title, description, hashtags и встроенный просмотр `final.mp4`
+* `Analytics` — поиск YouTube-канала по URL, `@handle` или названию и сводка по публичным Shorts
+
+После завершения генерации приложение автоматически:
+
+* обновляет список проектов
+* выделяет новый проект
+* переключается на вкладку `Projects`
+* позволяет открыть папку результата одной кнопкой
+
+При запуске приложения первой открывается вкладка `Anime Preview`, и аниме из поля по умолчанию подгружается автоматически.
+
+В полях выбора аниме можно:
+
+* выбрать тайтл из списка популярных аниме
+* ввести собственное название вручную
+
+Во встроенном video preview:
+
+* видео можно запустить кнопкой `Start Preview`
+* видео можно запускать и ставить на паузу кликом по области превью
+* также работает `Space` для play/pause
+
+Интерфейс вкладок теперь прокручивается, поэтому приложение остается удобным и на небольших экранах.
+
+В режиме `amv_edit`:
+
+* озвучка отключается
+* ролик собирается как музыкальный edit
+* для клипов используются открытые бесплатные видео из Pixabay API
+* используются более агрессивные переходы и анимации
+* metadata и итоговый render summary помечаются как `amv_edit`
+
+Во вкладке `Analytics` приложение показывает:
+
+* название канала, handle и ссылку
+* число подписчиков
+* сколько Shorts было проанализировано
+* суммарные и средние просмотры
+* таблицу Shorts с датой, просмотрами, лайками, комментариями и длительностью
+
+== Make targets
+
+[source,bash]
+----
+make install
+make run ANIME="Naruto"
+make gui
+make lint
+make clean
+----
+
+== Что появляется в `output`
+
+* `final.mp4` — готовый ролик
+* `storyboard.json` — структура сцен
+* `scene_plan.json` — длительности сцен
+* `shorts_title.txt` — заголовок для Shorts
+* `shorts_description.txt` — описание
+* `hashtags.txt` — хэштеги
+* `publish_metadata.json` — собранные publish-данные
+* `credits.txt` — музыкальная атрибуция

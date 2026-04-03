@@ -1,0 +1,36 @@
+{
+  "tracks": [
+    {
+      "title": "Call to Adventure",
+      "artist": "Kevin MacLeod",
+      "moods": ["energetic", "uplifting"],
+      "source_path": "Call%20to%20Adventure.mp3",
+      "license": "Creative Commons: By Attribution 4.0",
+      "attribution": "\"Call to Adventure\" Kevin MacLeod (incompetech.com) Licensed under Creative Commons: By Attribution 4.0 https://creativecommons.org/licenses/by/4.0/"
+    },
+    {
+      "title": "Sneaky Adventure",
+      "artist": "Kevin MacLeod",
+      "moods": ["energetic", "dramatic"],
+      "source_path": "Sneaky%20Adventure.mp3",
+      "license": "Creative Commons: By Attribution 4.0",
+      "attribution": "\"Sneaky Adventure\" Kevin MacLeod (incompetech.com) Licensed under Creative Commons: By Attribution 4.0 https://creativecommons.org/licenses/by/4.0/"
+    },
+    {
+      "title": "Serpentine Trek",
+      "artist": "Kevin MacLeod",
+      "moods": ["dramatic", "uplifting"],
+      "source_path": "Serpentine%20Trek.mp3",
+      "license": "Creative Commons: By Attribution 4.0",
+      "attribution": "\"Serpentine Trek\" Kevin MacLeod (incompetech.com) Licensed under Creative Commons: By Attribution 4.0 https://creativecommons.org/licenses/by/4.0/"
+    },
+    {
+      "title": "The Builder",
+      "artist": "Kevin MacLeod",
+      "moods": ["uplifting", "dramatic"],
+      "source_path": "The%20Builder.mp3",
+      "license": "Creative Commons: By Attribution 4.0",
+      "attribution": "\"The Builder\" Kevin MacLeod (incompetech.com) Licensed under Creative Commons: By Attribution 4.0 https://creativecommons.org/licenses/by/4.0/"
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "tracks": [
+    {
+      "title": "Call to Adventure",
+      "artist": "Kevin MacLeod",
+      "moods": ["energetic", "uplifting"],
+      "url": "https://incompetech.com/music/royalty-free/mp3-royaltyfree/Call%20to%20Adventure.mp3",
+      "license": "Creative Commons: By Attribution 4.0",
+      "attribution": "\"Call to Adventure\" Kevin MacLeod (incompetech.com) Licensed under Creative Commons: By Attribution 4.0 https://creativecommons.org/licenses/by/4.0/",
+      "source_page": "https://incompetech.com/music/royalty-free/music.html"
+    },
+    {
+      "title": "Sneaky Adventure",
+      "artist": "Kevin MacLeod",
+      "moods": ["energetic", "dramatic"],
+      "url": "https://incompetech.com/music/royalty-free/mp3-royaltyfree/Sneaky%20Adventure.mp3",
+      "license": "Creative Commons: By Attribution 4.0",
+      "attribution": "\"Sneaky Adventure\" Kevin MacLeod (incompetech.com) Licensed under Creative Commons: By Attribution 4.0 https://creativecommons.org/licenses/by/4.0/",
+      "source_page": "https://incompetech.com/music/royalty-free/music.html"
+    },
+    {
+      "title": "Serpentine Trek",
+      "artist": "Kevin MacLeod",
+      "moods": ["dramatic", "uplifting"],
+      "url": "https://incompetech.com/music/royalty-free/mp3-royaltyfree/Serpentine%20Trek.mp3",
+      "license": "Creative Commons: By Attribution 4.0",
+      "attribution": "\"Serpentine Trek\" Kevin MacLeod (incompetech.com) Licensed under Creative Commons: By Attribution 4.0 https://creativecommons.org/licenses/by/4.0/",
+      "source_page": "https://incompetech.com/music/royalty-free/music.html"
+    },
+    {
+      "title": "The Builder",
+      "artist": "Kevin MacLeod",
+      "moods": ["uplifting", "dramatic"],
+      "url": "https://incompetech.com/music/royalty-free/mp3-royaltyfree/The%20Builder.mp3",
+      "license": "Creative Commons: By Attribution 4.0",
+      "attribution": "\"The Builder\" Kevin MacLeod (incompetech.com) Licensed under Creative Commons: By Attribution 4.0 https://creativecommons.org/licenses/by/4.0/",
+      "source_page": "https://incompetech.com/music/royalty-free/music.html"
+    }
+  ]
+}
