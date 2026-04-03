@@ -6,6 +6,9 @@ title: Crypolt Studio
 
 AI‑assisted anime Shorts pipeline with bilingual captions, branded motion, and a built‑in project library.
 
+Repository: https://github.com/crypolt/ytshorts  
+Telegram: @crypolt
+
 ## What It Does
 - Generates vertical Shorts from anime titles.
 - Builds bilingual subtitles (RU + EN).
@@ -44,6 +47,3 @@ Create a tag to build and publish:
 git tag v1.0.0
 git push origin v1.0.0
 ```
-
-## Repo
-https://github.com/crypolt/ytshorts

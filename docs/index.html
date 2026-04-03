@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Crypolt Studio</title>
+    <style>
+      :root {
+        color-scheme: light;
+        --bg: #0a1221;
+        --panel: #111c2f;
+        --accent: #ff7a18;
+        --accent-2: #ff4268;
+        --text: #f3f7ff;
+        --muted: #9fb2cc;
+      }
+      * { box-sizing: border-box; }
+      body {
+        margin: 0;
+        font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+        background: radial-gradient(circle at 15% 15%, rgba(255,122,24,0.16), transparent 50%),
+                    radial-gradient(circle at 80% 70%, rgba(255,66,104,0.16), transparent 45%),
+                    var(--bg);
+        color: var(--text);
+      }
+      .wrap {
+        max-width: 980px;
+        margin: 0 auto;
+        padding: 64px 24px 72px;
+      }
+      .hero {
+        background: linear-gradient(135deg, rgba(255,122,24,0.12), rgba(17,28,47,0.9));
+        border: 1px solid rgba(255,255,255,0.08);
+        border-radius: 20px;
+        padding: 32px;
+        box-shadow: 0 20px 50px rgba(0,0,0,0.35);
+      }
+      h1 {
+        margin: 0 0 8px;
+        font-size: 40px;
+        letter-spacing: 0.3px;
+      }
+      p.lead {
+        margin: 0 0 18px;
+        color: var(--muted);
+        font-size: 18px;
+      }
+      .meta {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        font-size: 14px;
+      }
+      .badge {
+        background: rgba(255,255,255,0.08);
+        border: 1px solid rgba(255,255,255,0.12);
+        padding: 8px 12px;
+        border-radius: 999px;
+      }
+      .grid {
+        margin-top: 28px;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        gap: 16px;
+      }
+      .card {
+        background: var(--panel);
+        border: 1px solid rgba(255,255,255,0.08);
+        border-radius: 16px;
+        padding: 18px;
+      }
+      .card h3 {
+        margin: 0 0 8px;
+        font-size: 18px;
+      }
+      .card p {
+        margin: 0;
+        color: var(--muted);
+        line-height: 1.5;
+        font-size: 14px;
+      }
+      a {
+        color: var(--accent);
+        text-decoration: none;
+      }
+      a:hover {
+        color: var(--accent-2);
+      }
+      .footer {
+        margin-top: 40px;
+        font-size: 13px;
+        color: var(--muted);
+      }
+      code {
+        background: rgba(255,255,255,0.08);
+        padding: 2px 6px;
+        border-radius: 6px;
+        color: #fff;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <div class="hero">
+        <h1>Crypolt Studio</h1>
+        <p class="lead">AI‑assisted anime Shorts pipeline with bilingual captions, branded motion, and a built‑in project library.</p>
+        <div class="meta">
+          <div class="badge">Repository: <a href="https://github.com/crypolt/ytshorts">github.com/crypolt/ytshorts</a></div>
+          <div class="badge">Telegram: @crypolt</div>
+        </div>
+      </div>
+
+      <div class="grid">
+        <div class="card">
+          <h3>Story Mode</h3>
+          <p>Auto narration + RU/EN captions + Crypolt branded cards for clean Shorts.</p>
+        </div>
+        <div class="card">
+          <h3>AMV Edit</h3>
+          <p>No voice‑over, punchy motion cuts, and stronger transitions for high‑energy edits.</p>
+        </div>
+        <div class="card">
+          <h3>Quote Series</h3>
+          <p>One quote per day with explicit day markers, metadata, and consistent style.</p>
+        </div>
+        <div class="card">
+          <h3>Project Library</h3>
+          <p>Preview finished videos, export quickly, and keep all metadata organized.</p>
+        </div>
+      </div>
+
+      <div class="footer">
+        Build releases by tagging: <code>git tag v1.0.0</code> → <code>git push origin v1.0.0</code>
+      </div>
+    </div>
+  </body>
+</html>
